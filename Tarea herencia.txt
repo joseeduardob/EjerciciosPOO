@@ -1,0 +1,116 @@
+HERENCIAS
+JOSE EDUARDO BOLAÑOS
+
+package herencias;
+import javax.swing.JOptionPane;
+public class Herencias {
+    int Edad;
+    String Nombre;
+    String Apellido;
+    private String Deporte;
+    private String Direccion;
+    private String Genero;
+
+    public Herencias() {    }
+    public String getGenero() {
+        return Genero;
+    }
+    public String getDeporte() {
+        return Deporte;
+    }
+    public String getNombre() {
+        return Nombre;
+    }
+    public String getApellido() {
+        return Apellido;
+    }
+    public int getEdad() {
+        return Edad;
+    }
+    public String getDireccion() {
+        return Direccion;
+    }
+    public void setEdad(int edad) {
+        this.Edad = edad;
+    }
+    public void setApellido(String apellido) {
+        this.Apellido = apellido;
+    }
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+    public void setDeporte(String Deporte) {
+        this.Deporte = Deporte;
+    }
+    public void setGenero(String genero) {
+        this.Genero = genero;
+    }
+    public void setDireccion(String direccion) {
+        this.Direccion = direccion;
+    }
+    public void Datos() {
+        JOptionPane.showConfirmDialog(null, Nombre + Apellido + Deporte + Direccion + Genero);
+    }
+    public void PedirDatos() {
+        Nombre    = JOptionPane.showInputDialog("Ingrese el Nombre");
+        Apellido  = JOptionPane.showInputDialog("Ingrese el Apellido");
+        Deporte   = JOptionPane.showInputDialog("Ingrese el Deporte");
+        Direccion = JOptionPane.showInputDialog("Ingrese el direccion");   
+        Genero    = JOptionPane.showInputDialog("Ingrese el Genero");
+    }
+}
+
+package herencias;
+import javax.swing.JOptionPane;
+public class Atleta extends Herencias {
+
+    private String Liga;
+    private string Club;
+    private String Posicion;
+    private int Partidos;
+    private string Tacos;
+    
+    public Futbolista() {    }
+    public String getLiga() {
+        return Liga;
+    }
+    public string getClub() {
+        return Club;
+    }
+    public String getPosicion() {
+        return Posicion;
+    }
+    public Double getPartidos() {
+        return Partidos;
+    }
+    public String getTacos() {
+        return Tacos;
+    }
+    public void setPosicion(String Posicion) {
+        this.Posicion = Posicion;
+    }
+    public void setPartidos(int Partidos) {
+        this.Partidos = Partidos;
+    }
+    public void setLiga(String Liga) {
+        this.Liga = Liga;
+    }
+    public void setClub(String Club) {
+        this.Club = Club;
+    }
+        public void setTacos(String Tacos) {
+        this.Tacos = Tacos;
+    }
+    
+    @Override
+    public void Datos() {
+        Datos();
+        JOptionPane.showMessageDialog(null, Posicion + Club);
+    }
+    @Override
+    public void SolicitarDatos() {
+        SolicitarDatos();
+        Posicion = JOptionPane.showInputDialog("Ingrese la Posicion del jugador");
+        Club = JOptionPane.showInputDialog("Ingrese el CLub");
+    }
+}
